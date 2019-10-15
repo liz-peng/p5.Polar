@@ -3,7 +3,7 @@
 
 A polar coordinate system library for p5.js
 
-## Example
+### Example
 - Regular Traingle
 
 ``` JavaScript

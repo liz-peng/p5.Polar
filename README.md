@@ -8,7 +8,18 @@ A polar coordinate system library for p5.js
 
 ``` JavaScript
 function draw() {
-  num = 1; // number of traingles
+    translate(width/2, height/2); // center of the canvas
+    angle = 0;
+    radius = 100;
+    distance = 0;
+    Polar.regularTriangle(angle, radius, distance) // pass angle, radius and distance to polar system
+}
+```
+- Advanced Regular Traingle
+
+``` JavaScript
+function draw() {
+  num = 5; // number of traingles
   radius = 100; // radius of polar system
   distance = 0; // the distance between traingles
   for(let i=0; i<num; i++) {

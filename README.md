@@ -4,7 +4,7 @@
 A polar coordinate system library for p5.js
 
 ### Example
-- Regular Traingle
+- Regular Triangle
 
 ``` JavaScript
 function draw() {
@@ -15,13 +15,13 @@ function draw() {
 ```
 ![alt text](https://i.imgur.com/ZIl3qQ4.png "Polar.regularTriangle")
 
-- Advanced Regular Traingle
+- Advanced Regular Triangle
 
 ``` JavaScript
 function draw() {
   num = 2; // number of traingles
   rad = 100; // radius of polar system
-  dis = 0; // the distance between traingles
+  dis = 0; // the distance between triangles
   for(let i=0; i<num; i++) {
     resetMatrix();
     translate(width/2, height/2); // center of the canvas
@@ -31,3 +31,31 @@ function draw() {
 }
 ```
 ![alt text](https://i.imgur.com/YzoN9OM.png "Advanced Polar.regularTriangle")
+
+- Ellipse
+
+``` JavaScript
+function draw() {
+  resetMatrix();
+  translate(width/2, height/2); // center of the canvas
+  Polar.ellipse(0, 150, 0); // pass angle, radius and distance to polar system
+}
+```
+![alt text](https://i.imgur.com/0ot3y1B.png "Polar.ellipse")
+
+- Advanced Ellipse
+
+``` JavaScript
+function draw() {
+  num = 6; // number of circles
+  rad = 100; // radius of polar system
+  dis = 50; // the distance between triangles
+  for(let i=0; i<num; i++) {
+    resetMatrix();
+    translate(width/2, height/2); // center of the canvas
+    angle = (360/num)*i; // angle in the polar system
+    Polar.ellipse(angle, rad, dis); // pass angle, radius and distance to polar system
+  }
+}
+```
+![alt text](https://i.imgur.com/jnHmvWK.png "Advanced Polar.ellipse")

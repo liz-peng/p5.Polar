@@ -1,4 +1,4 @@
-# p5.polar
+# p5.Polar
 **Development still in progress**
 
 A polar coordinate system library for p5.js
@@ -58,4 +58,31 @@ function draw() {
   }
 }
 ```
-![alt text](https://i.imgur.com/jnHmvWK.png "Advanced Polar.ellipse")
+![alt text](https://i.imgur.com/g9yuIyV.png "Advanced Polar.ellipse")
+
+- Line
+
+``` JavaScript
+function draw() {
+  resetMatrix();
+  translate(width/2, height/2); // center of the canvas
+  Polar.line(0, 100); // pass angle and radius to polar system
+}
+```
+![alt text](https://i.imgur.com/wWzEtwW.png "Polar.line")
+
+- Advanced Line
+
+``` JavaScript
+function draw() {
+  num = 3; // number of lines
+  rad = 150; // radius of polar system
+  for(let i=0; i<num; i++) {
+    resetMatrix(); 
+    translate(width/2, height/2); // center of the canvas
+    angle = (360/num)*i; // angle in the polar system
+    Polar.line(angle, rad); // pass angle and radius to polar system
+  }
+}
+```
+![alt text](https://i.imgur.com/VQfvhwN.png "Advanced Polar.line")

@@ -1,5 +1,5 @@
 Polar.regularHexagon = function(_angle, _radius, _distance) {
-  _radians = radians(_angle);
+  let _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle));
   beginShape();

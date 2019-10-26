@@ -86,3 +86,31 @@ function draw() {
 }
 ```
 ![alt text](https://i.imgur.com/VQfvhwN.png "Advanced Polar.line")
+
+- Regular Hexagon
+
+``` JavaScript
+function draw() {
+  resetMatrix();
+  translate(width/2, height/2); // center of the canvas
+  Polar.regularHexagon(0, 125, 0); // pass angle, radius and distance to polar system
+}
+```
+![alt text](https://i.imgur.com/qyohW6H.png "Polar.regularHexagon")
+
+- Advanced Regular Hexagon
+
+``` JavaScript
+function draw() {
+  num = 6; // number of hexagons
+  rad = 50; // radius of polar system
+  dis = 50; // the distance between hexagons
+  for(let i=0; i<num; i++) {
+    resetMatrix();
+    translate(width/2, height/2); // center of the canvas
+    angle = (360/num)*i; // angle in the polar system
+    Polar.regularHexagon(angle, rad, dis); // pass angle, radius and distance to polar system
+  }
+}
+```
+![alt text](https://i.imgur.com/lgOgB4t.png "Advanced Polar.regularHexagon")

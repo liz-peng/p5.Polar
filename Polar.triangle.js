@@ -1,3 +1,13 @@
+Polar = {
+  center: { 
+    x: 0, 
+    y: 0 
+  },
+  setCenter(x, y) {
+    this.center.x = x;
+    this.center.y = y;
+  }
+};
 
 Polar.triangle = function(_angle, _radius, _distance) {
   resetMatrix();

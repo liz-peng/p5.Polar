@@ -20,7 +20,7 @@ Polar.line = function(_angle, _radius) {
 
 Polar.lines = function(_num, _radius) {
   const _angle = 360/_num;
-  for( let i=0; i<_num; i++) {
-    Polar.line(i*_angle, _radius)
+  for(let i=0; i<_num; i++) {
+    Polar.line(i*_angle, _radius);
   }
 }

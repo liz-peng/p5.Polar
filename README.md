@@ -8,26 +8,16 @@ A polar coordinate system library for p5.js https://p5js.org/
 
 ``` JavaScript
 function draw() {
-    resetMatrix();
-    translate(width/2, height/2); // center of the canvas
-    Polar.regularTriangle(0, 100, 0); // pass angle, radius and distance to polar system
+    Polar.triangle(0, 100, 0); // pass angle, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/ZIl3qQ4.png "Polar.regularTriangle")
 
-- Advanced Regular Triangle
+- Multiple Regular Triangle
 
 ``` JavaScript
 function draw() {
-  num = 2; // number of traingles
-  rad = 100; // radius of polar system
-  dis = 0; // the distance between triangles
-  for(let i=0; i<num; i++) {
-    resetMatrix();
-    translate(width/2, height/2); // center of the canvas
-    angle = (360/num)*i; // angle in the polar system
-    Polar.regularTriangle(angle, rad, dis); // pass angle, radius and distance to polar system
-  }
+   Polar.triangles(2, 100, 0); // pass number of triangles, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/YzoN9OM.png "Advanced Polar.regularTriangle")
@@ -36,26 +26,16 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  resetMatrix();
-  translate(width/2, height/2); // center of the canvas
   Polar.ellipse(0, 150, 0); // pass angle, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/0ot3y1B.png "Polar.ellipse")
 
-- Advanced Ellipse
+- Multiple Ellipse
 
 ``` JavaScript
 function draw() {
-  num = 6; // number of circles
-  rad = 100; // radius of polar system
-  dis = 50; // the distance between triangles
-  for(let i=0; i<num; i++) {
-    resetMatrix();
-    translate(width/2, height/2); // center of the canvas
-    angle = (360/num)*i; // angle in the polar system
-    Polar.ellipse(angle, rad, dis); // pass angle, radius and distance to polar system
-  }
+  Polar.ellipses(6, 100, 50); // pass number of ellipse, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/g9yuIyV.png "Advanced Polar.ellipse")
@@ -64,25 +44,16 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  resetMatrix();
-  translate(width/2, height/2); // center of the canvas
   Polar.line(0, 100); // pass angle and radius to polar system
 }
 ```
 ![alt text](https://i.imgur.com/wWzEtwW.png "Polar.line")
 
-- Advanced Line
+- Multiple Line
 
 ``` JavaScript
 function draw() {
-  num = 3; // number of lines
-  rad = 150; // radius of polar system
-  for(let i=0; i<num; i++) {
-    resetMatrix(); 
-    translate(width/2, height/2); // center of the canvas
-    angle = (360/num)*i; // angle in the polar system
-    Polar.line(angle, rad); // pass angle and radius to polar system
-  }
+  Polar.lines(3, 100); // pass number of lines and radius to polar system
 }
 ```
 ![alt text](https://i.imgur.com/VQfvhwN.png "Advanced Polar.line")
@@ -91,26 +62,16 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  resetMatrix();
-  translate(width/2, height/2); // center of the canvas
-  Polar.regularHexagon(0, 125, 0); // pass angle, radius and distance to polar system
+  Polar.hexagon(0, 125, 0); // pass angle, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/qyohW6H.png "Polar.regularHexagon")
 
-- Advanced Regular Hexagon
+- Multiple Regular Hexagon
 
 ``` JavaScript
 function draw() {
-  num = 6; // number of hexagons
-  rad = 50; // radius of polar system
-  dis = 50; // the distance between hexagons
-  for(let i=0; i<num; i++) {
-    resetMatrix();
-    translate(width/2, height/2); // center of the canvas
-    angle = (360/num)*i; // angle in the polar system
-    Polar.regularHexagon(angle, rad, dis); // pass angle, radius and distance to polar system
-  }
+  Polar.hexagons(6, 50, 50); // pass number of hexagons, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/lgOgB4t.png "Advanced Polar.regularHexagon")

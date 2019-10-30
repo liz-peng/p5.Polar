@@ -21,3 +21,10 @@ Polar.triangle = function(_angle, _radius, _distance) {
     sin(TWO_PI*2/3)*_radius, cos(TWO_PI*2/3)*-_radius
   );
 }
+
+Polar.triangles = function(_num, _radius, _distance) {
+  const _angle = 360/_num;
+  for(let i=0; i<_num; i++) {
+    Polar.triangle(i*_angle, _radius, _distance);
+  }
+}

@@ -34,7 +34,7 @@ Polar.ellipse = function(_angle, _radius, _distance) {
   translate(Polar.center.x, Polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*_distance);
-  ellipse(0, 0, _radius);
+  ellipse(0, 0, _radius*2);
 }
 
 Polar.ellipses = function(_num, _radius, _distance) {

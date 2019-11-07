@@ -22,9 +22,13 @@ Polar.triangle = function(_angle, _radius, _distance) {
   );
 }
 
-Polar.triangles = function(_num, _radius, _distance) {
+Polar.triangles = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=0; i<_num; i++) {
-    Polar.triangle(i*_angle, _radius, _distance);
+    if(callback) {
+      const _result = callback(i, _angle, _radius, _distance);
+      Polar.triangle(i*_result[0], _result[1], _result[2]);
+    }
+    else Polar.triangle(i*_angle, _radius, _distance);
   }
 }

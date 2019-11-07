@@ -17,9 +17,13 @@ Polar.ellipse = function(_angle, _radius, _distance) {
   ellipse(0, 0, _radius*2);
 }
 
-Polar.ellipses = function(_num, _radius, _distance) {
+Polar.ellipses = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
-  for(let i=0; i<_num; i++) {
-    Polar.ellipse(i*_angle, _radius, _distance);
+  for(let i=1; i<=_num; i++) {
+    if(callback) {
+      const _result = callback(i, _angle, _radius, _distance);
+      Polar.ellipse(i*_result[0], _result[1], _result[2]);
+    }
+    else Polar.ellipse(i*_angle, _radius, _distance);
   }
 }

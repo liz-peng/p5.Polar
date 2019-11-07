@@ -22,9 +22,13 @@ Polar.hexagon = function(_angle, _radius, _distance) {
   endShape(CLOSE);
 }
 
-Polar.hexagons = function(_num, _radius, _distance) {
+Polar.hexagons = function(_num, _radius, _distance, callback) {
   const _angle = 180/_num;
-  for(let i=0; i<_num; i++) {
-    Polar.hexagon(i*_angle, _radius, _distance);
+  for(let i=1; i<=_num; i++) {
+    if(callback) {
+      const _result = callback(i, _angle, _radius, _distance);
+      Polar.hexagon(i*_result[0], _result[1], _result[2]);
+    }
+    else Polar.hexagon(i*_angle, _radius, _distance);
   }
 }

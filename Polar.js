@@ -27,7 +27,7 @@ Polar.triangles = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.triangle(i*_result[0], _result[1], _result[2]);
+      Polar.triangle(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.triangle(i*_angle, _radius, _distance);
   }
@@ -46,7 +46,7 @@ Polar.ellipses = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.ellipse(i*_result[0], _result[1], _result[2]);
+      Polar.ellipse(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.ellipse(i*_angle, _radius, _distance);
   }
@@ -66,7 +66,7 @@ Polar.lines = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.line(i*_result[0], _result[1], _result[2]);
+      Polar.line(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.line(i*_angle, _radius, _distance);
   }
@@ -86,7 +86,7 @@ Polar.squares = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.square(i*_result[0], _result[1], _result[2]);
+      Polar.square(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.square(i*_angle, _radius, _distance);
   }
@@ -110,7 +110,7 @@ Polar.pentagons = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.pentagon(i*_result[0], _result[1], _result[2]);
+      Polar.pentagon(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.pentagon(i*_angle, _radius, _distance);
   }
@@ -134,7 +134,7 @@ Polar.hexagons = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.hexagon(i*_result[0], _result[1], _result[2]);
+      Polar.hexagon(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.hexagon(i*_angle, _radius, _distance);
   }
@@ -158,7 +158,7 @@ Polar.heptagons = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.heptagon(i*_result[0], _result[1], _result[2]);
+      Polar.heptagon(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.heptagon(i*_angle, _radius, _distance);
   }
@@ -182,7 +182,7 @@ Polar.octagons = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.octagon(i*_result[0], _result[1], _result[2]);
+      Polar.octagon(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.octagon(i*_angle, _radius, _distance);
   }

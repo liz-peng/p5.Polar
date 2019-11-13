@@ -23,7 +23,7 @@ Polar.lines = function(_num, _radius, _distance, callback) {
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.line(i*_result[0], _result[1], _result[2]);
+      Polar.line(_result[0]*_result[1], _result[2], _result[3]);
     }
     else Polar.line(i*_angle, _radius, _distance);
   }

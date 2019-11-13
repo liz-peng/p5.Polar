@@ -3,6 +3,8 @@
 
 A polar coordinate system library for p5.js https://p5js.org/
 
+![alt text](https://i.imgur.com/693CMSV.png "Polar.ellipses example") ![alt text](https://i.imgur.com/ReL7Ri3.png "Polar.lines example")
+
 ### Example
 - Regular Triangle
 

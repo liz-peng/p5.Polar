@@ -188,14 +188,14 @@ Polar.octagons = function(_num, _radius, _distance, callback) {
   }
 }
 
-Polar.polygon = function(_num, _angle, _radius) {
+Polar.polygon = function(_edge, _angle, _radius) {
   resetMatrix();
   translate(Polar.center.x, Polar.center.y);
   rotate(radians(_angle));
   beginShape();
-  for(let i=0; i<_num; i++) {
+  for(let i=0; i<_edge; i++) {
     vertex(
-      cos(TWO_PI*i/_num)*_radius, sin(TWO_PI*i/_num)*_radius
+      cos(TWO_PI*i/_edge)*_radius, sin(TWO_PI*i/_edge)*_radius
     );
   }
   endShape(CLOSE);

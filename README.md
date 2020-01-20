@@ -1,5 +1,5 @@
 # p5.Polar
-**Development still in progress**
+**The work still in progress**
 
 p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard drawing functions with versions using polar coordinates. The library converts polar coordinate to cartesian coordinate, and abstracts the mathematics required for making many types of geometric patterns.
 

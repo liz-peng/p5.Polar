@@ -1,4 +1,4 @@
-Polar = {
+const polar = {
   center: { 
     x: 0, 
     y: 0 
@@ -9,9 +9,9 @@ Polar = {
   }
 };
 
-Polar.triangle = function(_angle, _radius, _distance) {
+p5.prototype.polarTriangle = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle)); 
@@ -22,181 +22,179 @@ Polar.triangle = function(_angle, _radius, _distance) {
   );
 }
 
-Polar.triangles = function(_num, _radius, _distance, callback) {
+p5.prototype.polarTriangles = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.triangle(_result[0]*_result[1], _result[2], _result[3]);
+      polarTriangle(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.triangle(i*_angle, _radius, _distance);
+    else polarTriangle(i*_angle, _radius, _distance);
   }
 }
 
-Polar.ellipse = function(_angle, _radius, _distance) {
+p5.prototype.polarEllipse = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*_distance);
   ellipse(0, 0, _radius*2);
 }
 
-Polar.ellipses = function(_num, _radius, _distance, callback) {
+p5.prototype.polarEllipses = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.ellipse(_result[0]*_result[1], _result[2], _result[3]);
+      polarEllipse(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.ellipse(i*_angle, _radius, _distance);
+    else polarEllipse(i*_angle, _radius, _distance);
   }
 }
 
-Polar.line = function(_angle, _radius, _distance) {
+p5.prototype.polarLine = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle));
   line(0, _radius, 0, -_radius);
 }
 
-Polar.lines = function(_num, _radius, _distance, callback) {
+p5.prototype.polarLines = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.line(_result[0]*_result[1], _result[2], _result[3]);
+      polarLine(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.line(i*_angle, _radius, _distance);
+    else polarLine(i*_angle, _radius, _distance);
   }
 }
 
-Polar.square = function(_angle, _radius, _distance) {
+p5.prototype.polarSquare = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*_distance);
   rotate(radians(_angle));
   square(-_radius, -_radius, _radius*2);
 }
 
-Polar.squares = function(_num, _radius, _distance, callback) {
+p5.prototype.polarSquares = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.square(_result[0]*_result[1], _result[2], _result[3]);
+      polarSquare(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.square(i*_angle, _radius, _distance);
+    else polarSquare(i*_angle, _radius, _distance);
   }
 }
 
-Polar.pentagon = function(_angle, _radius, _distance) {
+p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle)+60);
   beginShape();
-  for(let i=0; i<5; i++) {
+  for(let i=1; i<=5; i++) {
     vertex(cos(TWO_PI*i/5)*_radius, sin(TWO_PI*i/5)*_radius);
   }
   endShape(CLOSE);
 }
 
-Polar.pentagons = function(_num, _radius, _distance, callback) {
+p5.prototype.polarPentagons = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.pentagon(_result[0]*_result[1], _result[2], _result[3]);
+      polarPentagon(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.pentagon(i*_angle, _radius, _distance);
+    else polarPentagon(i*_angle, _radius, _distance);
   }
 }
 
-Polar.hexagon = function(_angle, _radius, _distance) {
+p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle));
   beginShape();
-  for(let i=0; i<6; i++) {
+  for(let i=1; i<=6; i++) {
     vertex(cos(TWO_PI*i/6)*_radius, sin(TWO_PI*i/6)*_radius);
   }
   endShape(CLOSE);
 }
 
-Polar.hexagons = function(_num, _radius, _distance, callback) {
+p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
   const _angle = 180/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.hexagon(_result[0]*_result[1], _result[2], _result[3]);
+      polarHexagon(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.hexagon(i*_angle, _radius, _distance);
+    else polarHexagon(i*_angle, _radius, _distance);
   }
 }
 
-Polar.heptagon = function(_angle, _radius, _distance) {
+p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle)+11);
   beginShape();
-  for(let i=0; i<7; i++) {
+  for(let i=1; i<=7; i++) {
     vertex(cos(TWO_PI*i/7)*_radius, sin(TWO_PI*i/7)*_radius);
   }
   endShape(CLOSE);
 }
 
-Polar.heptagons = function(_num, _radius, _distance, callback) {
+p5.prototype.polarHeptagons = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.heptagon(_result[0]*_result[1], _result[2], _result[3]);
+      polarHeptagon(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.heptagon(i*_angle, _radius, _distance);
+    else polarHeptagon(i*_angle, _radius, _distance);
   }
 }
 
-Polar.octagon = function(_angle, _radius, _distance) {
+p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
   translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle));
   beginShape();
-  for(let i=0; i<8; i++) {
+  for(let i=1; i<=8; i++) {
     vertex(cos(TWO_PI*i/8)*_radius, sin(TWO_PI*i/8)*_radius);
   }
   endShape(CLOSE);
 }
 
-Polar.octagons = function(_num, _radius, _distance, callback) {
+p5.prototype.polarOctagons = function(_num, _radius, _distance, callback) {
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);
-      Polar.octagon(_result[0]*_result[1], _result[2], _result[3]);
+      polarOctagon(_result[0]*_result[1], _result[2], _result[3]);
     }
-    else Polar.octagon(i*_angle, _radius, _distance);
+    else polarOctagon(i*_angle, _radius, _distance);
   }
 }
 
-Polar.polygon = function(_edge, _angle, _radius) {
+p5.prototype.polarPolygon = function(_edge, _angle, _radius) {
   resetMatrix();
-  translate(Polar.center.x, Polar.center.y);
+  translate(polar.center.x, polar.center.y);
   rotate(radians(_angle));
   beginShape();
-  for(let i=0; i<_edge; i++) {
-    vertex(
-      cos(TWO_PI*i/_edge)*_radius, sin(TWO_PI*i/_edge)*_radius
-    );
+  for(let i=1; i<=_edge; i++) {
+    vertex(cos(TWO_PI*i/_edge)*_radius, sin(TWO_PI*i/_edge)*_radius);
   }
   endShape(CLOSE);
 }

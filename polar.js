@@ -9,6 +9,7 @@ const polar = {
   }
 };
 
+// Triangle
 p5.prototype.polarTriangle = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -33,6 +34,7 @@ p5.prototype.polarTriangles = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Ellipse
 p5.prototype.polarEllipse = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -52,6 +54,7 @@ p5.prototype.polarEllipses = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Line
 p5.prototype.polarLine = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -72,6 +75,7 @@ p5.prototype.polarLines = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Square
 p5.prototype.polarSquare = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -92,6 +96,7 @@ p5.prototype.polarSquares = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Pentagon
 p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -116,6 +121,7 @@ p5.prototype.polarPentagons = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Hexagon
 p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -140,6 +146,7 @@ p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Heptagon
 p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -164,6 +171,7 @@ p5.prototype.polarHeptagons = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Octagon
 p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
@@ -188,6 +196,7 @@ p5.prototype.polarOctagons = function(_num, _radius, _distance, callback) {
   }
 }
 
+// Polygon
 p5.prototype.polarPolygon = function(_edge, _angle, _radius) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);

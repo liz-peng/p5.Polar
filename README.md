@@ -29,7 +29,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  polarEllipse(0, 150, 0); // pass angle, radius and distance to polar system
+  polarEllipse(0, 150, 150, 0); // pass angle, width, height, and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/0ot3y1B.png "Polar.ellipse")
@@ -38,7 +38,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  polarEllipses(6, 100, 50); // pass number of ellipse, radius and distance to polar system
+  polarEllipses(6, 100, 100, 50); // pass number of ellipse, width, height, and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/g9yuIyV.png "Advanced Polar.ellipse")

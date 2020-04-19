@@ -11,7 +11,7 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 ``` JavaScript
 function draw() {
-    Polar.triangle(0, 100, 0); // pass angle, radius and distance to polar system
+    polarTriangle(0, 100, 0); // pass angle, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/ZIl3qQ4.png "Polar.regularTriangle")
@@ -20,7 +20,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-   Polar.triangles(2, 100, 0); // pass number of triangles, radius and distance to polar system
+   polarTriangles(2, 100, 0); // pass number of triangles, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/YzoN9OM.png "Advanced Polar.regularTriangle")
@@ -29,7 +29,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  Polar.ellipse(0, 150, 0); // pass angle, radius and distance to polar system
+  polarEllipse(0, 150, 0); // pass angle, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/0ot3y1B.png "Polar.ellipse")
@@ -38,7 +38,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  Polar.ellipses(6, 100, 50); // pass number of ellipse, radius and distance to polar system
+  polarEllipses(6, 100, 50); // pass number of ellipse, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/g9yuIyV.png "Advanced Polar.ellipse")
@@ -47,7 +47,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  Polar.line(0, 100); // pass angle and radius to polar system
+  polarLine(0, 100); // pass angle and radius to polar system
 }
 ```
 ![alt text](https://i.imgur.com/wWzEtwW.png "Polar.line")
@@ -56,7 +56,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  Polar.lines(3, 100); // pass number of lines and radius to polar system
+  polarLines(3, 100); // pass number of lines and radius to polar system
 }
 ```
 ![alt text](https://i.imgur.com/VQfvhwN.png "Advanced Polar.line")
@@ -65,7 +65,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  Polar.hexagon(0, 125, 0); // pass angle, radius and distance to polar system
+  polarHexagon(0, 125, 0); // pass angle, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/qyohW6H.png "Polar.regularHexagon")
@@ -74,7 +74,7 @@ function draw() {
 
 ``` JavaScript
 function draw() {
-  Polar.hexagons(6, 50, 50); // pass number of hexagons, radius and distance to polar system
+  polarHexagons(6, 50, 50); // pass number of hexagons, radius and distance to polar system
 }
 ```
 ![alt text](https://i.imgur.com/lgOgB4t.png "Advanced Polar.regularHexagon")

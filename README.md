@@ -19,7 +19,6 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 
 #### Single drawing functions
 - polarLine( angle, radius, [distance] )
-- polarTriangle( angle, radius, [distance] )
 - [polarTriangle( angle, radius, [distance] )](#polarTriangle)
 - polarSquare( angle, radius, [distance ) 
 - polarPentagon( angle, radius, [distance] )
@@ -37,11 +36,11 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarHexagons(number, radius, distance, [callback]) 
 - polarHeptagons(number, radius, distance, [callback])
 - polarOctogons(number, radius, distance, [callback])
-- polarEllipses(number, widthRadius, heightRadius, distance, [callback])
+- [polarEllipses(number, widthRadius, heightRadius, distance, [callback])](#polarEllipses)
 
 ### Examples of single drawing function
 #### polarTriangle() <a name="polarTriangle"></a>
-###### Draw a single triangle with radius 100 at the center of polar system
+###### Draw a single triangle with radius of 100 at the center of polar system
 <img src="https://imgur.com/1oqHVUv.png" width="50%" height="50%" />
 
 ``` JavaScript
@@ -70,7 +69,7 @@ function draw() {
 ```
 
 #### polarEllipse() <a name="polarEllipse"></a>
-###### Draw a single ellipse by giving the value of angle, width of radius, height of radius, and distance from center of polar system
+###### Draw a single ellipse with width of 50, and height of 100 from center of polar system
 <img src="https://imgur.com/hgLKp2q.png" width="50%" height="50%" />
 
 ``` JavaScript
@@ -81,7 +80,7 @@ function draw() {
 ```
 
 #### polarPolygon() <a name="polarPolygon"></a>
-###### Draw a single polygon with 12 edges by giving the value of edge, angle and radius from center of polar system
+###### Draw a single polygon with 12 edges, and radius of 100 from center of polar system
 <img src="https://imgur.com/4XyhWyv.png" width="25%" height="25%" />
 
 ``` JavaScript
@@ -92,8 +91,9 @@ function draw() {
 ```
 
 ### Examples of multiple drawing function
-#### polarEllipses()
-###### Draw multiple ellipses with the number of shape, width and height of radius, and distance from the center point
+#### polarEllipses() <a name="polarEllipses"></a>
+###### Draw 6 ellipses with both width and height of 50, and move 100 from the center point
+the number of shape, width and height of radius, and distance from the center point
 <img src="https://imgur.com/poEF2xK.png" width="50%" height="50%" />
 
 ``` JavaScript

@@ -17,7 +17,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 #### Set the center of polar coordinate system
 - polar.setCenter()
 
-#### Single drawing function
+#### [Single drawing function](#singleFunction)
 - polarLine( angle, radius, [distance] )
 - [polarTriangle( angle, radius, [distance] )](#polarTriangle)
 - polarSquare( angle, radius, [distance ) 
@@ -28,7 +28,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - [polarEllipse( angle, widthRadius, heightRadius, [distance] )](#polarEllipse)
 - [polarPolygon( number, angle, radius )](#polarPolygon)
 
-#### Multiple drawing function
+#### [Multiple drawing function](#multiFunction)
 - polarLines( number, radius, distance, [callback] )
 - [polarTriangles( number, radius, distance, [callback] )](#polarTriangles)
 - polarSquares( number, radius, distance, [callback] ) 
@@ -41,7 +41,9 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 #### [Callback function](#callback)
 - Multiple drawing function has the optional parameter which is the callback function. The callback function allows users to create more than just symmetric patterns. 
 
-### Examples of Single Drawing Function
+
+
+### Examples of Single Drawing Function <a name="singleFunction"></a>
 #### polarTriangle() <a name="polarTriangle"></a>
 ###### Draw a single triangle with radius of 100 at the center of polar system
 <img src="https://imgur.com/1oqHVUv.png" width="50%" height="50%" />
@@ -93,7 +95,7 @@ function draw() {
 }
 ```
 
-### Examples of Multiple Drawing Function
+### Examples of Multiple Drawing Function <a name="multiFunction"></a>
 #### polarTriangles() <a name="polarTriangles"></a>
 ###### Draw 6 triangles with radius 50, and move 100 from the center point
 <img src="https://imgur.com/KO3oLM5.png" width="50%" height="50%" />

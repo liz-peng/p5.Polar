@@ -31,12 +31,10 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 #### polarTriangle()
 
 Drawing a triangle with the angle, radius and distance from the center point
-
+<img src="https://imgur.com/KiSE1WA.png" width="50%" height="50%" />
 ``` JavaScript
 function draw() { 
     polar.setCenter(width/2, height/2);
     polarTriangle(0, 50, 0);
 }
 ```
-![alt text](https://i.imgur.com/uE8xRh1.png "polar triangle function")
-

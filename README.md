@@ -17,7 +17,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 #### Set the center of polar coordinate system
 - polar.setCenter()
 
-#### Single drawing functions
+#### Single drawing function
 - polarLine( angle, radius, [distance] )
 - [polarTriangle( angle, radius, [distance] )](#polarTriangle)
 - polarSquare( angle, radius, [distance ) 
@@ -28,7 +28,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - [polarEllipse( angle, widthRadius, heightRadius, [distance] )](#polarEllipse)
 - [polarPolygon( number, angle, radius )](#polarPolygon)
 
-#### Multiple drawing functions
+#### Multiple drawing function
 - polarLines( number, radius, distance, [callback] )
 - [polarTriangles( number, radius, distance, [callback] )](#polarTriangles)
 - polarSquares( number, radius, distance, [callback] ) 
@@ -37,6 +37,9 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarHeptagons( number, radius, distance, [callback] )
 - polarOctogons( number, radius, distance, [callback] )
 - [polarEllipses( number, widthRadius, heightRadius, distance, [callback] )](#polarEllipses)
+
+#### [Callback function](#callback)
+- Multiple drawing function has the optional parameter which is the callback function. The callback function allows users to create more than just symmetric patterns. 
 
 ### Examples of Single Drawing Function
 #### polarTriangle() <a name="polarTriangle"></a>
@@ -121,5 +124,21 @@ function draw() {
 function draw() { 
     polar.setCenter(width/2, height/2);
     polarEllipses(6, 50, 50, 100);
+}
+```
+
+#### callback function <a name="callback"></a>
+###### Giving a gradient color and different sizes of ellipse by manipulating the first argument
+<img src="https://imgur.com/1e0R21Z.png" width="25%" height="25%" />
+
+``` JavaScript
+function draw() { 
+    polar.setCenter(width/2, height/2);
+    polarEllipses(6, 50, 50, 100, function(...args) {
+        fill(args[0]*60, args[0]*60, args[0]*60);
+        args[2] = args[0]*6;
+        args[3] = args[0]*6;
+        return args;     
+    });
 }
 ```

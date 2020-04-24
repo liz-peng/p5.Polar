@@ -32,7 +32,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarLines(number, radius, distance, [callback])
 - [polarTriangles(number, radius, distance, [callback])](#polarTriangles)
 - polarSquares(number, radius, distance, [callback]) 
-- polarPentagons(number, radius, distance, [callback])
+- [polarPentagons(number, radius, distance, [callback])](#polarPentagons)
 - polarHexagons(number, radius, distance, [callback]) 
 - polarHeptagons(number, radius, distance, [callback])
 - polarOctogons(number, radius, distance, [callback])
@@ -99,6 +99,17 @@ function draw() {
 function draw() { 
     polar.setCenter(width/2, height/2);
     polarTriangles(6, 50, 100);
+}
+```
+
+#### polarPentagons() <a name="polarPentagons"></a>
+###### Draw 7 pentagons with radius 50, and move 100 from the center point
+<img src="https://imgur.com/MDwWnbf.png" width="50%" height="50%" />
+
+``` JavaScript
+function draw() { 
+    polar.setCenter(width/2, height/2);
+    polarPentagons(7, 50, 100);
 }
 ```
 

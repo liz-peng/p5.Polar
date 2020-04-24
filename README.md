@@ -27,7 +27,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarHeptagon( angle, radius, [distance] )
 - polarOctagon( angle, radius, [distance] )
 - [polarEllipse( angle, widthRadius, heightRadius, [distance] )](#polarEllipse)
-- polarPolygon( number, angle, radius ) 
+- [polarPolygon( number, angle, radius )](#polarPolygon)
 
 #### Multiple drawing functions
 - polarLines(number, radius, distance, [callback])
@@ -77,6 +77,17 @@ function draw() {
 function draw() { 
     polar.setCenter(width/2, height/2);
     polarEllipse(0, 50, 100, 0);
+}
+```
+
+#### polarPolygon() <a name="polarPolygon"></a>
+###### Draw a single polygon with 12 edges by giving the value of edge, angle and radius from center of polar system
+<img src="https://imgur.com/4XyhWyv.png" width="25%" height="25%" />
+
+``` JavaScript
+function draw() { 
+    polar.setCenter(width/2, height/2);
+    polarPolygon(12, 0, 100);
 }
 ```
 

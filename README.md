@@ -26,7 +26,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarHexagon( angle, radius, [distance] ) 
 - polarHeptagon( angle, radius, [distance] )
 - polarOctagon( angle, radius, [distance] )
-- polarEllipse( angle, widthRadius, heightRadius, [distance] )
+- [polarEllipse( angle, widthRadius, heightRadius, [distance] )](#polarEllipse)
 - polarPolygon( number, angle, radius ) 
 
 #### Multiple drawing functions
@@ -41,7 +41,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 
 ### Examples of single drawing function
 #### polarTriangle() <a name="polarTriangle"></a>
-###### Draw a single triangle with radius 100 at the center of the canvas
+###### Draw a single triangle with radius 100 at the center of polar system
 <img src="https://imgur.com/1oqHVUv.png" width="50%" height="50%" />
 
 ``` JavaScript
@@ -50,7 +50,7 @@ function draw() {
     polarTriangle(0, 100, 0);
 }
 ```
-###### Move 50 from the center of the canvas
+###### Move 50 from the center point
 <img src="https://imgur.com/WCc6eEg.png" width="50%" height="50%" />
 
 ``` JavaScript
@@ -66,6 +66,17 @@ function draw() {
 function draw() { 
     polar.setCenter(width/2, height/2);
     polarTriangle(30, 100, 50);
+}
+```
+
+#### polarEllipse() <a name="polarEllipse"></a>
+###### Draw a single ellipse by giving the value of angle, width of radius, height of radius, and distance from center of polar system
+<img src="https://imgur.com/hgLKp2q.png" width="50%" height="50%" />
+
+``` JavaScript
+function draw() { 
+    polar.setCenter(width/2, height/2);
+    polarEllipse(0, 50, 100, 0);
 }
 ```
 

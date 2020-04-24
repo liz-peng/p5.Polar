@@ -12,12 +12,12 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local environment. Then link p5.Polar.js or p5.Polar.min.js to your HTML file. If you are using [p5.js web editor](https://editor.p5js.org/), upload p5.Polar.js or p5.Polar.min.js to your sketch files. Then link p5.Polar.js or p5.Polar.min.js to the index.html.
 
-## Example
-### Basic usage
-[1] Set the center of polar coordinate system
+## Examples & Documentation
+### Basic Usage
+#### Set the center of polar coordinate system
 - polar.setCenter()
 
-[2] Single drawing functions
+#### Single drawing functions
 - polarLine( angle, radius, [distance] )
 - polarTriangle( angle, radius, [distance] )
 - [polarTriangle( angle, radius, [distance] )](#polarTriangle)
@@ -29,7 +29,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarEllipse( angle, widthRadius, heightRadius, [distance] )
 - polarPolygon( number, angle, radius ) 
 
-[3] Multiple drawing functions
+#### Multiple drawing functions
 - polarLines(number, radius, distance, [callback])
 - polarTriangles(number, radius, distance, [callback])
 - polarSquares(number, radius, distance, [callback]) 
@@ -39,18 +39,38 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarOctogons(number, radius, distance, [callback])
 - polarEllipses(number, widthRadius, heightRadius, distance, [callback])
 
+### Examples of single drawing function
 #### polarTriangle() <a name="polarTriangle"></a>
-###### Draw a single triangle with the angle, radius and distance from the center point
-<img src="https://imgur.com/KiSE1WA.png" width="50%" height="50%" />
+###### Draw a single triangle with radius 100 at the center of the canvas
+<img src="https://imgur.com/1oqHVUv.png" width="50%" height="50%" />
 
 ``` JavaScript
 function draw() { 
     polar.setCenter(width/2, height/2);
-    polarTriangle(0, 50, 0);
+    polarTriangle(0, 100, 0);
+}
+```
+###### Move 50 from the center of the canvas
+<img src="https://imgur.com/WCc6eEg.png" width="50%" height="50%" />
+
+``` JavaScript
+function draw() { 
+    polar.setCenter(width/2, height/2);
+    polarTriangle(0, 100, 50);
+}
+```
+###### Rotate the triangle for 30 degree
+<img src="https://imgur.com/nKhQ3jl.png" width="50%" height="50%" />
+
+``` JavaScript
+function draw() { 
+    polar.setCenter(width/2, height/2);
+    polarTriangle(30, 100, 50);
 }
 ```
 
-#### Multiple drawing function: polarEllipses()
+### Examples of multiple drawing function
+#### polarEllipses()
 ###### Draw multiple ellipses with the number of shape, width and height of radius, and distance from the center point
 <img src="https://imgur.com/poEF2xK.png" width="50%" height="50%" />
 

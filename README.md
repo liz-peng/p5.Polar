@@ -17,7 +17,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 [1] Set the center of polar coordinate system
 - polar.setCenter()
 
-[2] Single drawing functions:
+[2] Single drawing functions
 - polarLine( angle, radius, [distance] )
 - polarTriangle( angle, radius, [distance] )
 - polarSquare( angle, radius, [distance ) 
@@ -27,6 +27,16 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarOctagon( angle, radius, [distance] )
 - polarEllipse( angle, widthRadius, heightRadius, [distance] )
 - polarPolygon( number, angle, radius ) 
+
+[3] Multiple drawing functions
+- polarLines(number, radius, distance, [callback])
+- polarTriangles(number, radius, distance, [callback])
+- polarSquares(number, radius, distance, [callback]) 
+- polarPentagons(number, radius, distance, [callback])
+- polarHexagons(number, radius, distance, [callback]) 
+- polarHeptagons(number, radius, distance, [callback])
+- polarOctogons(number, radius, distance, [callback])
+- polarEllipses(number, widthRadius, heightRadius, distance, [callback])
 
 #### Single drawing function: polarTriangle()
 ###### Draw a triangle with the angle, radius and distance from the center point

@@ -29,14 +29,14 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - [polarPolygon( number, angle, radius )](#polarPolygon)
 
 #### Multiple drawing functions
-- polarLines(number, radius, distance, [callback])
-- [polarTriangles(number, radius, distance, [callback])](#polarTriangles)
-- polarSquares(number, radius, distance, [callback]) 
-- [polarPentagons(number, radius, distance, [callback])](#polarPentagons)
-- polarHexagons(number, radius, distance, [callback]) 
-- polarHeptagons(number, radius, distance, [callback])
-- polarOctogons(number, radius, distance, [callback])
-- [polarEllipses(number, widthRadius, heightRadius, distance, [callback])](#polarEllipses)
+- polarLines( number, radius, distance, [callback] )
+- [polarTriangles( number, radius, distance, [callback] )](#polarTriangles)
+- polarSquares( number, radius, distance, [callback] ) 
+- [polarPentagons( number, radius, distance, [callback] )](#polarPentagons)
+- polarHexagons( number, radius, distance, [callback] ) 
+- polarHeptagons( number, radius, distance, [callback] )
+- polarOctogons( number, radius, distance, [callback] )
+- [polarEllipses( number, widthRadius, heightRadius, distance, [callback] )](#polarEllipses)
 
 ### Examples of Single Drawing Function
 #### polarTriangle() <a name="polarTriangle"></a>

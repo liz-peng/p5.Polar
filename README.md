@@ -38,7 +38,7 @@ Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local env
 - polarOctogons(number, radius, distance, [callback])
 - [polarEllipses(number, widthRadius, heightRadius, distance, [callback])](#polarEllipses)
 
-### Examples of single drawing function
+### Examples of Single Drawing Function
 #### polarTriangle() <a name="polarTriangle"></a>
 ###### Draw a single triangle with radius of 100 at the center of polar system
 <img src="https://imgur.com/1oqHVUv.png" width="50%" height="50%" />
@@ -90,10 +90,9 @@ function draw() {
 }
 ```
 
-### Examples of multiple drawing function
+### Examples of Multiple Drawing Function
 #### polarEllipses() <a name="polarEllipses"></a>
 ###### Draw 6 ellipses with both width and height of 50, and move 100 from the center point
-the number of shape, width and height of radius, and distance from the center point
 <img src="https://imgur.com/poEF2xK.png" width="50%" height="50%" />
 
 ``` JavaScript

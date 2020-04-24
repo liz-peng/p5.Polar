@@ -1,11 +1,16 @@
 # p5.Polar
-**The work still in progress**
+**[WIP]**
 
 p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard drawing functions with versions using polar coordinates. The library converts polar coordinate to cartesian coordinate, and abstracts the mathematics required for making many types of geometric patterns.
 
 ![alt text](https://i.imgur.com/ZjgWIoF.png "p5.Polar example") 
 
 ![alt text](https://i.imgur.com/PXTtO8M.png "p5.Polar example") 
+
+## How to add library to your p5.js sketch
+[Using a library](https://p5js.org/libraries/) 
+
+Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local environment. Then link p5.Polar.js or p5.Polar.min.js to your HTML file. If you are using [p5.js web editor](https://editor.p5js.org/), upload p5.Polar.js or p5.Polar.min.js to your sketch files. Then link p5.Polar.js or p5.Polar.min.js to the index.html.
 
 ### Example
 - Regular Triangle

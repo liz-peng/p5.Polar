@@ -43,7 +43,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 
 #### [Callback function](#callback)
 The value of each member of args: 
-- args[0] = number
+- args[0] = number of shapes (from 1 to N)
 - args[1] = angle 
 - args[2] = radius 
 - args[3] = distance

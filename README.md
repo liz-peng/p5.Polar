@@ -137,16 +137,17 @@ function draw() {
 
 #### callback function <a name="callback"></a>
 ###### Giving a gradient color and different sizes of ellipse by manipulating the first argument
-<img src="https://imgur.com/1e0R21Z.png" width="25%" height="25%" />
+<img src="https://imgur.com/pm4olf6.png" width="25%" height="25%" />
 
 ``` JavaScript
 function draw() { 
     polar.setCenter(width/2, height/2);
-    polarEllipses(6, 50, 50, 100, function(...args) {
-        fill(args[0]*60, args[0]*60, args[0]*60);
+    polarEllipses(10, 0, 0, 100, function(...args) {
+        fill(args[0]*40, args[0]*40, args[0]*40, 160);
         args[2] = args[0]*6;
         args[3] = args[0]*6;
         return args;     
     });
 }
 ```
+

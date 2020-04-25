@@ -42,8 +42,11 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 - [polarEllipses( number, widthRadius, heightRadius, distance, [callback] )](#polarEllipses)
 
 #### [Callback function](#callback)
-- Multiple drawing function has the optional parameter which is the callback function. The callback function allows users to create more than just symmetric patterns. 
-
+The value of each member of args: 
+- args[0] = number
+- args[1] = angle 
+- args[2] = radius 
+- args[3] = distance
 
 
 ### Examples of Single Drawing Function <a name="singleFunction"></a>

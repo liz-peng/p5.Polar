@@ -13,7 +13,7 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local environment. Then link p5.Polar.js or p5.Polar.min.js to your HTML file. If you are using [p5.js web editor](https://editor.p5js.org/), upload p5.Polar.js or p5.Polar.min.js to your sketch files. Then link p5.Polar.js or p5.Polar.min.js to the index.html.
 
 ## Playground
-Try out the library and create shapes and patterns at the p5.Polar [Playground](https://liz-peng.github.io/p5.Polar/playground.html) (the playground will support callback function soon).
+Try out the library and create shapes and patterns at the p5.Polar [Playground](https://liz-peng.github.io/p5.Polar/playground.html) (Note: callback function is not available and will be supported soon).
 
 ## Examples & Documentation
 ### Basic Usage

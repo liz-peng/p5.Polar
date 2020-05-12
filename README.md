@@ -5,7 +5,9 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 ![alt text](https://imgur.com/8V2uuzd.png "p5.Polar example") 
 
-![alt text](https://i.imgur.com/PXTtO8M.png "p5.Polar example") 
+![alt text](https://imgur.com/xBoxdhF.png "p5.Polar example") 
+
+![alt text](https://imgur.com/oYARjRE.png "p5.Polar example") 
 
 ## How to add library to your p5.js sketch
 [Using a library](https://p5js.org/libraries/) 

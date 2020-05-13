@@ -147,7 +147,7 @@ p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
 }
 
 p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
-  const _angle = 180/_num;
+  const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
       const _result = callback(i, _angle, _radius, _distance);

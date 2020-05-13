@@ -3,11 +3,11 @@
 // | '_ \___ \ | |_) / _ \| |/ _` | '__|
 // | |_) |__) ||  __/ (_) | | (_| | |   
 // | .__/____(_)_|   \___/|_|\__,_|_|   
-// |_|     
+// |_|   
 //
 // https://github.com/liz-peng/p5.Polar
 // Created by Liz Peng
-// Version 1.0 May 7th 2020                    
+// Version 1.0 May 7th 2020             
 
 const polar = {
   center: { 
@@ -50,7 +50,7 @@ p5.prototype.polarEllipse = function(_angle, _radiusW, _radiusH, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
-  translate(sin(_radians)*_distance, cos(_radians)*_distance);
+  translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   ellipse(0, 0, _radiusW*2, _radiusH*2);
 }
 

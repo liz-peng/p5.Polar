@@ -91,7 +91,7 @@ p5.prototype.polarSquare = function(_angle, _radius, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
-  translate(sin(_radians)*_distance, cos(_radians)*_distance);
+  translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   rotate(radians(_angle));
   square(-_radius, -_radius, _radius*2);
 }

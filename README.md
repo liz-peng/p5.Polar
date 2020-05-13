@@ -31,7 +31,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 - polarHeptagon( angle, radius, [distance] )
 - polarOctagon( angle, radius, [distance] )
 - [polarEllipse( angle, widthRadius, heightRadius, [distance] )](#polarEllipse)
-- [polarPolygon( number, angle, radius )](#polarPolygon)
+- [polarPolygon( number, angle, radius, [distance] )](#polarPolygon)
 
 #### [Multiple drawing function](#multiFunction)
 - polarLines( number, radius, distance, [callback] )

@@ -13,7 +13,7 @@ p5.prototype.polarEllipse = function(_angle, _radiusW, _radiusH, _distance) {
   resetMatrix();
   translate(polar.center.x, polar.center.y);
   const _radians = radians(_angle);
-  translate(sin(_radians)*_distance, cos(_radians)*_distance);
+  translate(sin(_radians)*_distance, cos(_radians)*-_distance);
   ellipse(0, 0, _radiusW*2, _radiusH*2);
 }
 

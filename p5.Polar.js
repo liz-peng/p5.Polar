@@ -7,7 +7,7 @@
 //
 // https://github.com/liz-peng/p5.Polar
 // Created by Liz Peng
-// Version 1.0 May 7th 2020             
+// Version 1.1 May 13th 2020             
 
 const polar = {
   center: { 

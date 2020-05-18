@@ -228,8 +228,6 @@ p5.prototype.polarPolygons = function(_num, _edge, _radius, _distance, callback)
       const _result = callback(i, _angle, _edge, _radius, _distance);
       polarPolygon(_result[2], _result[0]*_result[1], _result[3], _result[4]);
     }
-    else {
-      polarPolygon(_edge, i*_angle, _radius, _distance);
-    }
+    else polarPolygon(_edge, i*_angle, _radius, _distance);
   }
 }

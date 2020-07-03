@@ -42,6 +42,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 - polarHeptagons( number, radius, distance, [callback] )
 - polarOctogons( number, radius, distance, [callback] )
 - [polarEllipses( number, widthRadius, heightRadius, distance, [callback] )](#polarEllipses)
+- polarPolygons( number, number of edges, radius, distance, [callback] )
 
 #### [Callback function](#callback)
 The value of each member of args: 
@@ -93,7 +94,7 @@ function draw() {
 ```
 
 #### polarPolygon() <a name="polarPolygon"></a>
-###### Draw a single polygon with 12 edges, and radius of 100 from center of polar system
+###### Draw a twelve-sided shape from center of polar system
 <img src="https://imgur.com/4XyhWyv.png" width="25%" height="25%" />
 
 ``` JavaScript

@@ -13,6 +13,7 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 What's new in version 2.0?
 - Instead of using polar.setCenter(x,y) to set the center point, now just simply call setCenter() function and pass the x and y values.
 - Support drawing with [instance mode](https://p5js.org/examples/instance-mode-instantiation.html).
+- Add multiple polygons drawing function.
 
 ## How to add library to your p5.js sketch
 [Using a library](https://p5js.org/libraries/) 

@@ -66,7 +66,7 @@ The value of each member of args:
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarTriangle(0, 100, 0);
 }
 ```
@@ -75,7 +75,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarTriangle(0, 100, 50);
 }
 ```
@@ -84,7 +84,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarTriangle(30, 100, 50);
 }
 ```
@@ -95,7 +95,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarEllipse(0, 50, 100, 0);
 }
 ```
@@ -106,7 +106,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarPolygon(12, 0, 100);
 }
 ```
@@ -118,7 +118,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarTriangles(6, 50, 100);
 }
 ```
@@ -129,7 +129,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarPentagons(7, 50, 100);
 }
 ```
@@ -140,7 +140,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarEllipses(6, 50, 50, 100);
 }
 ```
@@ -151,7 +151,7 @@ function draw() {
 
 ``` JavaScript
 function draw() { 
-    polar.setCenter(width/2, height/2);
+    setCenter(width/2, height/2);
     polarEllipses(10, 0, 0, 100, function(...args) {
         fill(args[0]*40, args[0]*40, args[0]*40, 160);
         args[2] = args[0]*6;

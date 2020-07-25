@@ -58,7 +58,7 @@ p5.prototype.polarEllipses = function(_num, _radiusW, _radiusH, _distance, callb
   const _angle = 360/_num;
   for(let i=1; i<=_num; i++) {
     if(callback) {
-      const _result = callback(i, _angle, _radius, _distance);
+      const _result = callback(i, _angle, _radiusW, _radiusH, _distance);
       this.polarEllipse(_result[0]*_result[1], _result[2], _result[3], _result[4]);
     }
     else this.polarEllipse(i*_angle, _radiusW, _radiusH, _distance);

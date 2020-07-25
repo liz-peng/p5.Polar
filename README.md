@@ -49,7 +49,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 - polarHeptagons( number, radius, distance, [callback] )
 - polarOctogons( number, radius, distance, [callback] )
 - [polarEllipses( number, widthRadius, heightRadius, distance, [callback] )](#polarEllipses)
-- polarPolygons( number, number of edges, radius, distance, [callback] )
+- [polarPolygons( number, number of edges, radius, distance, [callback] )](#polarPolygons)
 
 #### [Callback function](#callback)
 The value of each member of args: 
@@ -58,13 +58,14 @@ The value of each member of args:
 - args[2] = radius 
 - args[3] = distance
 
-polarEllipses() value of each member of args: 
-- args[0] = number of shapes (from 1 to N)
+The value of each member of args when drawing with polarEllipses() function: 
+- args[0] = number of ellipses (from 1 to N)
 - args[1] = angle 
 - args[2] = width of radius 
 - args[3] = height of radius 
 - args[4] = distance
 
+#### [Pattern examples](#example)
 
 ### Examples of Single Drawing Function <a name="singleFunction"></a>
 #### polarTriangle() <a name="polarTriangle"></a>
@@ -168,7 +169,7 @@ function draw() {
 }
 ```
 
-## Pattern examples
+## Pattern examples <a name="example"></a>
 #### Pattern 1
 <img src="https://i.imgur.com/R6ktywg.png" width="25%" height="25%" />
 
@@ -236,9 +237,9 @@ function draw() {
   
    // polarPentagons( number, radius, distance, [callback] )
   fill(238, 175, 170, 80);
-  polarPentagons(6, 150, 150)
+  polarPentagons(6, 150, 150);
   fill(175, 170, 238, 40);
-  polarPentagons(8, 200, 200)
+  polarPentagons(8, 200, 200);
   
   // polarEllipses( number, widthRadius, heightRadius, distance, [callback] )
   fill(238, 175, 170);
@@ -248,3 +249,96 @@ function draw() {
 }
 ```
 
+#### Pattern 4
+<img src="https://i.imgur.com/fCPVJk0.png" width="25%" height="25%" />
+
+``` JavaScript
+function draw() {
+  background(0);
+  setCenter(width/2, height/2);
+  
+  // polarLines( number, radius, distance, [callback] )
+  noFill();
+  stroke('#ccc');
+  strokeWeight(0.5);
+  polarLines(8, 140, 0);
+  polarLines(8, 60, 20);
+  
+  // polarEllipses( number, widthRadius, heightRadius, distance, [callback] )
+  noStroke();
+  fill(13, 146, 185, 110);
+  polarEllipses(10, 50, 50, 70);
+  fill(252, 248, 200, 120);
+  polarEllipses(5, 36, 36, 32);
+  fill(178, 216, 178, 120);
+  polarEllipses(10, 30, 30, 70);
+  polarEllipses(10, 30, 30, 120);
+  fill(238, 175, 170);
+  polarEllipses(12, 8, 8, 40);
+  fill(252, 248, 200, 120);
+  polarEllipses(5, 16, 16, 32);
+  fill(13, 146, 185, 110);
+  polarEllipses(14, 50, 50, 155);
+  
+  // polarHexagon( angle, radius, [distance] ) 
+  noStroke();
+  fill(175, 170, 238);
+  polarHexagon(3, 10, 0);
+  
+  fill(238, 175, 170);
+  // polarTriangles( number, radius, distance, [callback] )
+  polarTriangles(4, 6, 60);
+  polarTriangles(4, 8, 140);
+  // polarSquares( number, radius, distance, [callback] )
+  polarSquares(8, 2, 80);
+  polarSquares(4, 4, 120);
+}
+```
+
+#### Pattern 5
+<img src="https://i.imgur.com/h9st51u.png" width="25%" height="25%" />
+
+``` JavaScript
+function draw() {
+  background(0);
+  setCenter(width/2, height/2);
+  noFill()
+  
+  strokeWeight(1);
+  
+  stroke('#ff7300');
+  // polarPolygon( number, angle, radius, [distance] )
+  polarPolygon(10, 0, 50);
+  // polarPentagons( number, radius, distance, [callback] )
+  polarPentagons(6, 60, 60);
+  
+  // polarTriangles( number, radius, distance, [callback] )
+  stroke('#64ff00');
+  polarTriangles(8, 125, 150);
+  
+  strokeWeight(1);
+  stroke('#fc49ab');
+  polarTriangles(10, 150, 150);
+}
+```
+
+#### Pattern 6 <a name="polarPolygons"></a>
+<img src="https://i.imgur.com/xg7EcYQ.png" width="25%" height="25%" />
+
+``` JavaScript
+function draw() {
+  background(220);
+  setCenter(width/2, height/2);
+  stroke('#000');
+  
+  // polarPolygons( number, number of edges, radius, distance, [callback] )
+  fill(229,188,231,120);
+  polarPolygons(16, 4, 40, 180);
+  fill(32,178,170,120);
+  polarPolygons(6, 4, 40, 150);
+  fill(252, 248, 200, 120);
+  polarPolygons(6, 4, 80, 100);
+  fill(255, 255, 255, 120);
+  polarPolygons(6, 4, 40, 100);
+}
+```

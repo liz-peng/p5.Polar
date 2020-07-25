@@ -173,10 +173,6 @@ function draw() {
 <img src="https://i.imgur.com/R6ktywg.png" width="25%" height="25%" />
 
 ``` JavaScript
-function setup() {
-  createCanvas(400, 400);
-}
-
 function draw() {
   background(220);
   setCenter(width/2, height/2);
@@ -206,10 +202,6 @@ function draw() {
 <img src="https://i.imgur.com/Cg7wyAO.png" width="25%" height="25%" />
 
 ``` JavaScript
-function setup() {
-  createCanvas(400, 400);
-}
-
 function draw() {
   background(220);
   setCenter(width/2, height/2);
@@ -231,10 +223,6 @@ function draw() {
 <img src="https://i.imgur.com/i37XO62.png" width="25%" height="25%" />
 
 ``` JavaScript
-function setup() {
-  createCanvas(400, 400);
-}
-
 function draw() {
   background(220);
   setCenter(width/2, height/2);

@@ -58,6 +58,13 @@ The value of each member of args:
 - args[2] = radius 
 - args[3] = distance
 
+polarEllipses() value of each member of args: 
+- args[0] = number of shapes (from 1 to N)
+- args[1] = angle 
+- args[2] = width of radius 
+- args[3] = height of radius 
+- args[4] = distance
+
 
 ### Examples of Single Drawing Function <a name="singleFunction"></a>
 #### polarTriangle() <a name="polarTriangle"></a>

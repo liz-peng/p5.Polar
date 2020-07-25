@@ -161,7 +161,8 @@ function draw() {
 }
 ```
 
-#### Pattern examples</a>
+## Pattern examples
+#### Pattern 1
 <img src="https://i.imgur.com/R6ktywg.png" width="25%" height="25%" />
 
 ``` JavaScript
@@ -172,12 +173,19 @@ function setup() {
 function draw() {
   background(220);
   setCenter(width/2, height/2);
+  
+  // polarLines( number, radius, distance, [callback] )
   stroke('#000')
   strokeWeight(0.3);
   polarLines(3, 200, 0);
+  
   noStroke();
+  
+  // polarHexagon( angle, radius, [distance] )
   fill(175, 170, 238);
   polarHexagon(30, 50, 0);
+  
+  // polarEllipse( angle, widthRadius, heightRadius, [distance] )
   fill(252, 248, 200);
   polarEllipses(8, 10, 10, 100);
   fill(238, 175, 170);
@@ -187,6 +195,7 @@ function draw() {
 }
 ```
 
+#### Pattern 2
 <img src="https://i.imgur.com/Cg7wyAO.png" width="25%" height="25%" />
 
 ``` JavaScript
@@ -208,6 +217,39 @@ function draw() {
       args[4] = args[0]*5;
       return args;
   });
+}
+```
+
+#### Pattern 3
+<img src="https://i.imgur.com/i37XO62.png" width="25%" height="25%" />
+
+``` JavaScript
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  setCenter(width/2, height/2);
+  noStroke();
+  
+  // polarTriangle( angle, radius, [distance] )
+  fill(175, 170, 238);
+  polarTriangle(0, 100, 0);
+  fill(238, 175, 170);
+  polarTriangle(180, 100, 0);
+  
+   // polarPentagons( number, radius, distance, [callback] )
+  fill(238, 175, 170, 80);
+  polarPentagons(6, 150, 150)
+  fill(175, 170, 238, 40);
+  polarPentagons(8, 200, 200)
+  
+  // polarEllipses( number, widthRadius, heightRadius, distance, [callback] )
+  fill(238, 175, 170);
+  polarEllipses(3, 10, 5, 120);
+  fill(175, 170, 238);
+  polarEllipses(3, 5, 10, -120);
 }
 ```
 

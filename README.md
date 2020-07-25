@@ -161,3 +161,29 @@ function draw() {
 }
 ```
 
+#### Pattern examples</a>
+<img src="https://i.imgur.com/R6ktywg.png" width="25%" height="25%" />
+
+``` JavaScript
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  setCenter(width/2, height/2);
+  stroke('#000')
+  strokeWeight(0.3);
+  polarLines(3, 200, 0);
+  noStroke();
+  fill(175, 170, 238);
+  polarHexagon(30, 50, 0);
+  fill(252, 248, 200);
+  polarEllipses(8, 10, 10, 100);
+  fill(238, 175, 170);
+  polarEllipses(12, 40, 40, 200);
+  fill(252, 248, 200, 120);
+  polarEllipses(5, 80, 80, 160);
+}
+```
+

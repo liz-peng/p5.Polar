@@ -187,3 +187,27 @@ function draw() {
 }
 ```
 
+<img src="https://i.imgur.com/Cg7wyAO.png" width="25%" height="25%" />
+
+``` JavaScript
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  setCenter(width/2, height/2);
+  noFill();
+  
+  // polarEllipses( number, widthRadius, heightRadius, distance, [callback] )
+  polarEllipses(50, 0, 0, 0, function(...args) {
+    stroke(args[0]*10);
+    fill(args[0]*5, args[0]*4, args[0]*3, 30);
+      args[2] = args[0]*6;
+      args[3] = args[0]*6;
+      args[4] = args[0]*5;
+      return args;
+  });
+}
+```
+

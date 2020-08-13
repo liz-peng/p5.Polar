@@ -7,23 +7,21 @@
 //
 // https://github.com/liz-peng/p5.Polar
 // Created by Liz Peng
-// Version 2.0 July 19th 2020             
+// Version 2.1 Aug 13th 2020             
 
 // let each sketches have their center point
 p5.prototype.setCenter = function(x, y) {
   if(this.center === undefined ) {
-    this.center = { x, y }
+   this.center = { x, y }
   }
   else {
-    this.center.x = x; 
-    this.center.y = y;
+    this.translate(this.center.x = x, this.center.y = y);
   }
 }
 
 // Triangle
 p5.prototype.polarTriangle = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)); 
@@ -32,6 +30,7 @@ p5.prototype.polarTriangle = function(_angle, _radius, _distance) {
     this.sin(this.TWO_PI*1/3)*_radius, this.cos(this.TWO_PI*1/3)*-_radius,
     this.sin(this.TWO_PI*2/3)*_radius, this.cos(this.TWO_PI*2/3)*-_radius
   );
+  this.pop();
 }
 
 p5.prototype.polarTriangles = function(_num, _radius, _distance, callback) {
@@ -47,11 +46,12 @@ p5.prototype.polarTriangles = function(_num, _radius, _distance, callback) {
 
 // Ellipse
 p5.prototype.polarEllipse = function(_angle, _radiusW, _radiusH, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
+  this.rotate(this.radians(_angle));
   this.ellipse(0, 0, _radiusW*2, _radiusH*2);
+  this.pop();
 }
 
 p5.prototype.polarEllipses = function(_num, _radiusW, _radiusH, _distance, callback) {
@@ -67,12 +67,12 @@ p5.prototype.polarEllipses = function(_num, _radiusW, _radiusH, _distance, callb
 
 // Line
 p5.prototype.polarLine = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.line(0, _radius, 0, -_radius);
+  this.pop();
 }
 
 p5.prototype.polarLines = function(_num, _radius, _distance, callback) {
@@ -88,12 +88,12 @@ p5.prototype.polarLines = function(_num, _radius, _distance, callback) {
 
 // Square
 p5.prototype.polarSquare = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
   this.square(-_radius, -_radius, _radius*2);
+  this.pop();
 }
 
 p5.prototype.polarSquares = function(_num, _radius, _distance, callback) {
@@ -109,8 +109,7 @@ p5.prototype.polarSquares = function(_num, _radius, _distance, callback) {
 
 // Pentagon
 p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)+60);
@@ -119,6 +118,7 @@ p5.prototype.polarPentagon = function(_angle, _radius, _distance) {
     this.vertex(this.cos(this.TWO_PI*i/5)*_radius, this.sin(this.TWO_PI*i/5)*_radius);
   }
   this.endShape(this.CLOSE);
+  this.pop();
 }
 
 p5.prototype.polarPentagons = function(_num, _radius, _distance, callback) {
@@ -134,8 +134,7 @@ p5.prototype.polarPentagons = function(_num, _radius, _distance, callback) {
 
 // Hexagon
 p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
@@ -146,6 +145,7 @@ p5.prototype.polarHexagon = function(_angle, _radius, _distance) {
       );
     }
   this.endShape(this.CLOSE);
+  this.pop();
 }
 
 p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
@@ -161,8 +161,7 @@ p5.prototype.polarHexagons = function(_num, _radius, _distance, callback) {
 
 // Heptagon
 p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle)+11);
@@ -171,6 +170,7 @@ p5.prototype.polarHeptagon = function(_angle, _radius, _distance) {
     this.vertex(this.cos(this.TWO_PI*i/7)*_radius, this.sin(this.TWO_PI*i/7)*_radius);
   }
   this.endShape(this.CLOSE);
+  this.pop();
 }
 
 p5.prototype.polarHeptagons = function(_num, _radius, _distance, callback) {
@@ -186,8 +186,7 @@ p5.prototype.polarHeptagons = function(_num, _radius, _distance, callback) {
 
 // Octagon
 p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
@@ -196,6 +195,7 @@ p5.prototype.polarOctagon = function(_angle, _radius, _distance) {
     this.vertex(this.cos(this.TWO_PI*i/8)*_radius, this.sin(this.TWO_PI*i/8)*_radius);
   }
   this.endShape(this.CLOSE);
+  this.pop();
 }
 
 p5.prototype.polarOctagons = function(_num, _radius, _distance, callback) {
@@ -211,8 +211,7 @@ p5.prototype.polarOctagons = function(_num, _radius, _distance, callback) {
 
 // Polygon
 p5.prototype.polarPolygon = function(_edge, _angle, _radius, _distance) {
-  this.resetMatrix();
-  this.translate(this.center.x, this.center.y);
+  this.push();
   const _radians = this.radians(_angle);
   this.translate(this.sin(_radians)*_distance, this.cos(_radians)*-_distance);
   this.rotate(this.radians(_angle));
@@ -221,6 +220,7 @@ p5.prototype.polarPolygon = function(_edge, _angle, _radius, _distance) {
     this.vertex(this.cos(this.TWO_PI*i/_edge)*_radius, this.sin(this.TWO_PI*i/_edge)*_radius);
   }
   this.endShape(this.CLOSE);
+  this.pop();
 }
 
 p5.prototype.polarPolygons = function(_num, _edge, _radius, _distance, callback) {

@@ -11,7 +11,7 @@
 
 // let each sketches have their center point
 p5.prototype.setCenter = function(x, y) {
-  if(this.center === undefined ) {
+  if(this.center === undefined) {
    this.center = { x, y }
   }
   else {

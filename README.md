@@ -9,11 +9,10 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 ![alt text](https://i.imgur.com/ww5tuWK.png "p5.Polar example") 
 
-## Release Note (07/19/2020)
-What's new in version 2.0?
-- Instead of using polar.setCenter(x,y) to set the center point, now just simply call setCenter() function and pass the x and y values.
-- Support drawing with [instance mode](https://p5js.org/examples/instance-mode-instantiation.html).
-- Add multiple polygons drawing function.
+## Release Note (08/13/2020)
+What's new in version 2.1?
+- Fix drawing ellipse doesn't radiate outward from center point.
+- Fix bug to support drawing animation (scroll down to see the examples about how to draw animation).
 - Special thanks to the project's advisor [@charlieroberts](https://github.com/charlieroberts) for all the tips and resources!
 
 ## How to add library to your p5.js sketch
@@ -37,7 +36,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 #### [Single drawing function](#singleFunction)
 - polarLine( angle, radius, [distance] )
 - [polarTriangle( angle, radius, [distance] )](#polarTriangle)
-- polarSquare( angle, radius, [distance ) 
+- polarSquare( angle, radius, [distance] ) 
 - polarPentagon( angle, radius, [distance] )
 - polarHexagon( angle, radius, [distance] ) 
 - polarHeptagon( angle, radius, [distance] )
@@ -70,7 +69,9 @@ The value of each member of args when drawing with polarEllipses() function:
 - args[3] = height of radius 
 - args[4] = distance
 
-#### [Pattern examples](#example)
+#### [Animation examples](#animation)
+
+#### [Pattern examples](#pattern)
 
 ### Examples of Single Drawing Function <a name="singleFunction"></a>
 #### polarTriangle() <a name="polarTriangle"></a>
@@ -174,7 +175,52 @@ function draw() {
 }
 ```
 
-## Pattern examples <a name="example"></a>
+## Animation examples <a name="animation"></a>
+#### Animation 1
+###### Use sin() and frameCount() to make oscillation
+![](https://imgur.com/muqenQh.gif)
+
+``` JavaScript
+function draw() { 
+  setCenter(width/2, height/2);
+  stroke(238, 175, 170);
+  strokeWeight(1.5);
+  noFill();
+  polarEllipses(30, 40+sin(frameCount/10)*20, 80, 80);
+}
+```
+
+#### Animation 2
+###### Drawing multiple animations with different center point. Remember to use resetMatrix() to replace the current matrix before setting new center
+![](https://i.imgur.com/qxnpCNy.gif)
+
+``` JavaScript
+function draw() { 
+  noFill();
+  strokeWeight(1.5);
+  stroke(238, 175, 170);
+  
+  setCenter(width/4, height/4);
+  polarEllipses(20, 20+sin(frameCount/10)*10, 40, 40);
+  
+  // replace the current matrix before setting new center
+  resetMatrix();
+  setCenter(width/4+200, height/4);
+  rotate(frameCount * 0.01); 
+  polarEllipses(20, 20, 40, 40);
+  
+  resetMatrix();
+  setCenter(width/4, height/4+200);
+  rotate(frameCount * 0.01); 
+  polarEllipses(20, 20, 40, 40);
+  
+  resetMatrix();
+  setCenter(width/4+200, height/4+200);
+  polarEllipses(20, 20+sin(frameCount/10)*10, 40, 40);
+}
+```
+
+## Pattern examples <a name="pattern"></a>
 #### Pattern 1
 <img src="https://i.imgur.com/R6ktywg.png" width="25%" height="25%" />
 

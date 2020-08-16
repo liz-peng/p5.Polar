@@ -10,7 +10,7 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 ![alt text](https://i.imgur.com/ww5tuWK.png "p5.Polar example") 
 
 ## Release Note (08/13/2020)
-What's new in version 2.1?
+What's new in version 2.1 ?
 - Fix drawing ellipse doesn't radiate outward from center point.
 - Fix bug to support drawing animation (scroll down to see the examples about how to draw animation).
 - Special thanks to the project's advisor [@charlieroberts](https://github.com/charlieroberts) for all the tips and resources!
@@ -178,13 +178,12 @@ function draw() {
 ## Animation examples <a name="animation"></a>
 #### Animation 1
 ###### Use sin() and frameCount() to make oscillation
-![](https://imgur.com/muqenQh.gif)
+![](https://i.imgur.com/e8pONwt.gif)
 
 ``` JavaScript
 function draw() { 
   setCenter(width/2, height/2);
-  stroke(238, 175, 170);
-  strokeWeight(1.5);
+  stroke('#666');
   noFill();
   polarEllipses(30, 40+sin(frameCount/10)*20, 80, 80);
 }
@@ -192,13 +191,12 @@ function draw() {
 
 #### Animation 2
 ###### Drawing multiple animations with different center point. Remember to use resetMatrix() to replace the current matrix before setting new center
-![](https://i.imgur.com/qxnpCNy.gif)
+![](https://i.imgur.com/X108ADh.gif)
 
 ``` JavaScript
 function draw() { 
   noFill();
-  strokeWeight(1.5);
-  stroke(238, 175, 170);
+  stroke('#666');
   
   setCenter(width/4, height/4);
   polarEllipses(20, 20+sin(frameCount/10)*10, 40, 40);

@@ -81,7 +81,7 @@ The value of each member of args when drawing with polarEllipses() function:
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
-    polarTriangle(0, 100, 0);
+    polarTriangle(0, 100, 0); // works the same as polarTriangle(0, 100);
 }
 ```
 ###### Move 50 from the center point
@@ -110,7 +110,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
-    polarEllipse(0, 50, 100, 0);
+    polarEllipse(0, 50, 100, 0); // works the same as polarEllipse(0, 50, 100)
 }
 ```
 

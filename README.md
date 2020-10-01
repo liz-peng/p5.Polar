@@ -9,6 +9,8 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 ![alt text](https://i.imgur.com/ww5tuWK.png "p5.Polar example") 
 
+![alt text](https://imgur.com/3CPWaaS.png "why p5.Polar") 
+
 ## Release Note (08/13/2020)
 What's new in version 2.1 ?
 - Fix drawing ellipse doesn't radiate outward from center point.

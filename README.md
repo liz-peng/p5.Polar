@@ -23,14 +23,14 @@ What's new in version 2.1 ?
 [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js)
 
 ## How to add library to your p5.js sketch
-[Using a library](https://p5js.org/libraries/) 
+- [Official guide about how to use a library](https://p5js.org/libraries/) 
 
-Download p5.Polar.js or the minified version, p5.Polar.min.js, to your local environment. Link p5.Polar.js or p5.Polar.min.js to your HTML file.
+- Download _p5.Polar.js_ or the minified version _p5.Polar.min.js_ to your local environment. Link the file to your HTML.
 
-Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js) to your HTML file.
+- Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js) to your HTML.
 
 
-If you are using [p5.js web editor](https://editor.p5js.org/), upload p5.Polar.js or p5.Polar.min.js to your sketch files. Link p5.Polar.js or p5.Polar.min.js to the index.html.
+- If you are using [p5.js web editor](https://editor.p5js.org/), upload _p5.Polar.js_ or _p5.Polar.min.js_ to your sketch files, and then Link the file to index.html.
 
 ## Playground
 Try out the library and create shapes and patterns at the p5.Polar [Playground](https://liz-peng.github.io/p5.Polar/playground.html) (Note: callback function is not available and will be supported soon).

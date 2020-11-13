@@ -17,6 +17,11 @@ What's new in version 2.1 ?
 - Fix bug to support drawing animation (scroll down to see the examples about how to draw animation).
 - Special thanks to the project's advisor [@charlieroberts](https://github.com/charlieroberts) for all the tips and resources!
 
+## CDN
+[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js)
+
+[p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js)
+
 ## How to add library to your p5.js sketch
 [Using a library](https://p5js.org/libraries/) 
 

@@ -14,9 +14,9 @@ p5.prototype.setCenter = function(x, y) {
   if(this.center === undefined) {
    this.center = { x, y }
   }
-  else {
-    this.translate(this.center.x = x, this.center.y = y);
-  }
+  
+  this.translate(this.center.x = x, this.center.y = y);
+  
 }
 
 // Triangle

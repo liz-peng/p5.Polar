@@ -233,3 +233,43 @@ p5.prototype.polarPolygons = function(_num, _edge, _radius, _distance, callback)
     else this.polarPolygon(_edge, i*_angle, _radius, _distance);
   }
 }
+
+
+// Custom Function
+// NOTE: polarCustomFunction() and polarCustomFunctions() call a user-defined draw method with a required `_radius` parameter and the option for additional params. This method is not defined in the p5.Polar library, and therefore needs to be instantiated in the user's project and specified as the _function parameter when calling polarCustomFunction().
+p5.prototype.polarCustomFunction = function(_function, _angle, _radius, _distance, ..._args) {
+  this.push()
+  const _radians = this.radians(_angle)
+  this.translate(
+    this.sin(_radians) * _distance,
+    this.cos(_radians) * -_distance
+  )
+  this.rotate(this.radians(_angle))
+    _function(_radius, ..._args)
+  this.pop()
+}
+
+// Custom Functions
+p5.prototype.polarCustomFunctions = function(
+  _function,
+  _num,
+  _radius,
+  _distance,
+  callback,
+  ..._args
+) {
+  const _angle = 360 / _num
+  for (let i = 1; i <= _num; i++) {
+    if (callback) {
+      const _result = callback(_function, i, _angle, _radius, _distance, ..._args)
+        this.polarCustomFunction(_result[0], _result[1] * _result[2], _result[3], _result[4], ..._result[5])
+    } else this.polarCustomFunction(
+      _function,
+      i * _angle,
+      _radius,
+      _distance,
+      ..._args
+    )
+  }
+}
+

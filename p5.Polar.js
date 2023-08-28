@@ -14,7 +14,6 @@ p5.prototype.setCenter = function(x, y) {
   if(this.center === undefined) {
    this.center = { x, y }
   }
-  
   this.translate(this.center.x = x, this.center.y = y);
 }
 
@@ -36,8 +35,6 @@ p5.prototype.polarDrawCallback = function(_num, _radius, _distance, drawCallback
     this.pop();  
   }
 }
-
-
 
 // Triangle
 p5.prototype.polarTriangle = function(_angle, _radius, _distance) {

@@ -201,6 +201,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
   noFill();
+  background(220);
   stroke('#666');
   
   setCenter(width/4, height/4);

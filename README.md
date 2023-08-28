@@ -19,16 +19,16 @@ What's new in version 2.2 ?
 - Contributed by [@iuli4n](https://github.com/iuli4n): added generic callback draw function for drawing anything.
 
 ## CDN
-[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js)
+[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js)
 
-[p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js)
+[p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js)
 
 ## How to add library to your p5.js sketch
 - [Official guide about how to use a library](https://p5js.org/libraries/) 
 
 - Download _p5.Polar.js_ or the minified version _p5.Polar.min.js_ to your local environment. Link the file to your HTML.
 
-- Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js) to your HTML.
+- Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js) to your HTML.
 
 
 - If you are using [p5.js web editor](https://editor.p5js.org/), upload _p5.Polar.js_ or _p5.Polar.min.js_ to your sketch files, and then Link the file to index.html.

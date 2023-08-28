@@ -1,4 +1,5 @@
 // Extensions to the p5.Polar library
+// Contributed by https://github.com/iuli4n
 
 // Shift a certain distance in the X axis, and multiple the scale by _scale 
 p5.prototype.shiftDistScale = function(_distance, _scale) {

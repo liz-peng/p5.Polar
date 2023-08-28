@@ -7,7 +7,7 @@
 //
 // https://github.com/liz-peng/p5.Polar
 // Created by Liz Peng
-// Version 2.1 Aug 13th 2020             
+// Version 2.2 Aug 28th 2023             
 
 // let each sketches have their center point
 p5.prototype.setCenter = function(x, y) {

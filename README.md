@@ -9,11 +9,14 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 ![alt text](https://imgur.com/3CPWaaS.png "why p5.Polar") 
 
-## Release Note (08/13/2020)
-What's new in version 2.1 ?
-- Fix drawing ellipse doesn't radiate outward from center point.
-- Fix bug to support drawing animation (scroll down to see the examples about how to draw animation).
-- Special thanks to the project's advisor [@charlieroberts](https://github.com/charlieroberts) for all the tips and resources!
+## Project Advisor
+- [@charlieroberts](https://github.com/charlieroberts)
+
+## Release Note (08/28/2023)
+What's new in version 2.2 ?
+- Contributed by [@iuli4n](https://github.com/iuli4n): fixed bugs the first call to setCenter() doesn't actually translate.
+- Contributed by [@iuli4n](https://github.com/iuli4n): added generic function to shift things around the circle.
+- Contributed by [@iuli4n](https://github.com/iuli4n): added generic callback draw function for drawing anything.
 
 ## CDN
 [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js)
@@ -86,6 +89,7 @@ The value of each member of args when drawing with polarEllipses() function:
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangle(0, 100, 0); // works the same as polarTriangle(0, 100);
 }
 ```
@@ -95,6 +99,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangle(0, 100, 50);
 }
 ```
@@ -104,6 +109,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangle(30, 100, 50);
 }
 ```
@@ -115,6 +121,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarEllipse(0, 50, 100, 0); // works the same as polarEllipse(0, 50, 100)
 }
 ```
@@ -126,6 +133,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarPolygon(12, 0, 100);
 }
 ```
@@ -138,6 +146,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangles(6, 50, 100);
 }
 ```
@@ -149,6 +158,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarPentagons(7, 50, 100);
 }
 ```
@@ -160,6 +170,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarEllipses(6, 50, 50, 100);
 }
 ```
@@ -171,6 +182,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarEllipses(10, 0, 0, 100, function(...args) {
         fill(args[0]*40, args[0]*40, args[0]*40, 160);
         args[2] = args[0]*6;
@@ -188,6 +200,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
   setCenter(width/2, height/2);
+  background(220);
   stroke('#666');
   noFill();
   polarEllipses(30, 40+sin(frameCount/10)*20, 80, 80);

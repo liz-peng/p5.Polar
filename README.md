@@ -9,22 +9,21 @@ p5.Polar is a JavaScript library that extends [p5.js](https://p5js.org/) standar
 
 ![alt text](https://imgur.com/3CPWaaS.png "why p5.Polar") 
 
-## Release Note (08/19/2023)
-What's new in version 2.2 ?
+## Release Note (08/28/2023)
+What's new in version 2.3 ?
 - Add support for custom draw functions in addition to standard geometric shapes
 
 ## CDN
-[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js)
+[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js)
 
-[p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js)
+[p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js)
 
 ## How to add library to your p5.js sketch
 - [Official guide about how to use a library](https://p5js.org/libraries/) 
 
 - Download _p5.Polar.js_ or the minified version _p5.Polar.min.js_ to your local environment. Link the file to your HTML.
 
-- Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar/p5.Polar.min.js) to your HTML.
-
+- Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js) to your HTML.
 
 - If you are using [p5.js web editor](https://editor.p5js.org/), upload _p5.Polar.js_ or _p5.Polar.min.js_ to your sketch files, and then Link the file to index.html.
 
@@ -86,6 +85,7 @@ The value of each member of args when drawing with polarEllipses() function:
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangle(0, 100, 0); // works the same as polarTriangle(0, 100);
 }
 ```
@@ -95,6 +95,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangle(0, 100, 50);
 }
 ```
@@ -104,6 +105,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangle(30, 100, 50);
 }
 ```
@@ -115,6 +117,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarEllipse(0, 50, 100, 0); // works the same as polarEllipse(0, 50, 100)
 }
 ```
@@ -126,6 +129,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarPolygon(12, 0, 100);
 }
 ```
@@ -158,6 +162,7 @@ function drawCustom(_radius, _startColor, _endColor) {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarTriangles(6, 50, 100);
 }
 ```
@@ -169,6 +174,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarPentagons(7, 50, 100);
 }
 ```
@@ -180,6 +186,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarEllipses(6, 50, 50, 100);
 }
 ```
@@ -211,6 +218,7 @@ function drawCustom(_radius, _startColor, _endColor) {
 ``` JavaScript
 function draw() { 
     setCenter(width/2, height/2);
+    background(220);
     polarEllipses(10, 0, 0, 100, function(...args) {
         fill(args[0]*40, args[0]*40, args[0]*40, 160);
         args[2] = args[0]*6;
@@ -228,6 +236,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
   setCenter(width/2, height/2);
+  background(220);
   stroke('#666');
   noFill();
   polarEllipses(30, 40+sin(frameCount/10)*20, 80, 80);
@@ -241,6 +250,7 @@ function draw() {
 ``` JavaScript
 function draw() { 
   noFill();
+  background(220);
   stroke('#666');
   
   setCenter(width/4, height/4);

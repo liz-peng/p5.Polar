@@ -17,7 +17,7 @@ What's new in version 2.3 ?
 - Bug fix for shiftRotate function.
 
 ## CDN
-[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js)
+[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@7d843a68beb71e0f3805593630115b6ca6065617/p5.Polar.js)
 
 [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js)
 

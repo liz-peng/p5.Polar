@@ -17,7 +17,7 @@ What's new in version 2.3 ?
 - Bug fix for shiftRotate function.
 
 ## CDN
-[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js)
+[p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@7d843a68beb71e0f3805593630115b6ca6065617/p5.Polar.js)
 
 [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js)
 
@@ -41,8 +41,7 @@ What's new in version 2.3 ?
 
 - Download _p5.Polar.js_ or the minified version _p5.Polar.min.js_ to your local environment. Link the file to your HTML.
 
-- Link [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js) to your HTML.
-
+- Link [p5.Polar.js]([https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@7d843a68beb71e0f3805593630115b6ca6065617/p5.Polar.js)) or the minified version, [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js) to your HTML.
 
 - If you are using [p5.js web editor](https://editor.p5js.org/), upload _p5.Polar.js_ or _p5.Polar.min.js_ to your sketch files, and then Link the file to index.html.
 

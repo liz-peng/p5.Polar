@@ -12,8 +12,9 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 ## Project Advisor
 - [@charlieroberts](https://github.com/charlieroberts)
 
-## Release Note (08/28/2023)
-What's new in version 2.2 ?
+## Release Note (09/05/2023)
+What's new in version 2.3 ?
+- Bug fix for shiftRotate function.
 - Contributed by [@iuli4n](https://github.com/iuli4n): fixed bugs the first call to setCenter() doesn't actually translate.
 - Contributed by [@iuli4n](https://github.com/iuli4n): added generic function to shift things around the circle.
 - Contributed by [@iuli4n](https://github.com/iuli4n): added generic callback draw function for drawing anything.

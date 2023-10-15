@@ -9,7 +9,7 @@ p5.Polar is a JavaScript library that extends [p5.js](https://p5js.org/) standar
 
 ![alt text](https://imgur.com/3CPWaaS.png "why p5.Polar") 
 
-## Release Note (08/28/2023)
+## Release Note (10/15/2023)
 What's new in version 2.3 ?
 - Add support for custom draw functions in addition to standard geometric shapes
 
@@ -17,6 +17,21 @@ What's new in version 2.3 ?
 [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js)
 
 [p5.Polar.min.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.min.js)
+
+## Older Version
+2.2 release note (08/28/2023): 
+- [p5.Polar.js v2.2](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@92ae01aa75a8c1206a73def951dc9db87d7c3495/p5.Polar.js)
+- [p5.Polar.min.js v2.2](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@92ae01aa75a8c1206a73def951dc9db87d7c3495/p5.Polar.min.js)
+- Contributed by [@iuli4n](https://github.com/iuli4n): fixed bugs the first call to setCenter() doesn't actually translate.
+- Contributed by [@iuli4n](https://github.com/iuli4n): added generic function to shift things around the circle.
+- Contributed by [@iuli4n](https://github.com/iuli4n): added generic callback draw function for drawing anything.
+
+2.1 release note (08/13/2020):
+- [p5.Polar.js v2.1](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@7fdf0131eaa94ef263051d9ba52a1b008729ecc2/p5.Polar.js)
+- [p5.Polar.min.js v2.1](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@7fdf0131eaa94ef263051d9ba52a1b008729ecc2/p5.Polar.min.js)
+- Fix drawing ellipse doesn't radiate outward from center point.
+- Fix bug to support drawing animation (scroll down to see the examples about how to draw animation).
+- Special thanks to the project's advisor [@charlieroberts](https://github.com/charlieroberts) for all the tips and resources!
 
 ## How to add library to your p5.js sketch
 - [Official guide about how to use a library](https://p5js.org/libraries/) 

@@ -1,5 +1,5 @@
 # p5.Polar
-p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard drawing functions with versions using polar coordinates. The library converts polar coordinate to cartesian coordinate, and abstracts the mathematics required for making many types of geometric patterns.
+p5.Polar is a JavaScript library that extends [p5.js](https://p5js.org/) standard drawing functions with versions using polar coordinates. The library converts polar coordinates to cartesian coordinates, and abstracts the mathematics required for making many types of geometric patterns.
 
 ![alt text](https://imgur.com/8V2uuzd.png "p5.Polar example") 
 
@@ -9,12 +9,9 @@ p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard
 
 ![alt text](https://imgur.com/3CPWaaS.png "why p5.Polar") 
 
-## Project Advisor
-- [@charlieroberts](https://github.com/charlieroberts)
-
-## Release Note (09/05/2023)
+## Release Note (10/15/2023)
 What's new in version 2.3 ?
-- Bug fix for shiftRotate function.
+- Add support for custom draw functions in addition to standard geometric shapes
 
 ## CDN
 [p5.Polar.js](https://cdn.jsdelivr.net/gh/liz-peng/p5.Polar@latest/p5.Polar.js)
@@ -63,6 +60,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 - polarOctagon( angle, radius, [distance] )
 - [polarEllipse( angle, widthRadius, heightRadius, [distance] )](#polarEllipse)
 - [polarPolygon( number, angle, radius, [distance] )](#polarPolygon)
+- [polarCustomFunction( function, angle, radius, distance, [params] )](#polarCustom)
 
 #### [Multiple drawing function](#multiFunction)
 - polarLines( number, radius, distance, [callback] )
@@ -74,6 +72,7 @@ Try out the library and create shapes and patterns at the p5.Polar [Playground](
 - polarOctogons( number, radius, distance, [callback] )
 - [polarEllipses( number, widthRadius, heightRadius, distance, [callback] )](#polarEllipses)
 - [polarPolygons( number, number of edges, radius, distance, [callback] )](#polarPolygons)
+- [polarCustomFunctions( function, number, radius, distance, [callback], [params] )](#polarCustomFunctions)
 
 #### [Callback function](#callback)
 The value of each member of args: 
@@ -150,6 +149,26 @@ function draw() {
 }
 ```
 
+#### polarCustomFunction() <a name="polarCustomFunction"></a>
+###### Draw a series of arcs to form a circle
+<img src="https://imgur.com/GeE4wzE.png" width="25%" height="25%" />
+
+``` JavaScript
+function draw() { 
+    setCenter(width/2, height/2);
+    polarCustom(drawCustom, 0, 200, 0, 0, 255);
+}
+
+function drawCustom(_radius, _startColor, _endColor) {
+    for (let i = 0; i < 360; i += 20) {
+        let ratio = i / 360;
+        let currentColor = _startColor + Math.floor(ratio * (_endColor - _startColor));
+        stroke(currentColor)
+        this.arc(0, 0, _radius, _radius, this.radians(i), this.radians(i + 5 ))
+    }
+}
+```
+
 ### Examples of Multiple Drawing Function <a name="multiFunction"></a>
 #### polarTriangles() <a name="polarTriangles"></a>
 ###### Draw 6 triangles with radius 50, and move 100 from the center point
@@ -184,6 +203,26 @@ function draw() {
     setCenter(width/2, height/2);
     background(220);
     polarEllipses(6, 50, 50, 100);
+}
+```
+
+#### polarCustomFunctions() <a name="polarCustomFunctions"></a>
+###### Draw a series of arcs to form an overlapping circular pattern
+<img src="https://imgur.com/krcS6hC.png" width="50%" height="50%" />
+
+``` JavaScript
+function draw() { 
+    setCenter(width/2, height/2);
+    polarCustoms(drawCustom, 10, 100, 60, null, 0, 255);
+}
+
+function drawCustom(_radius, _startColor, _endColor) {
+    for (let i = 0; i < 360; i += 20) {
+        let ratio = i / 360;
+        let currentColor = _startColor + Math.floor(ratio * (_endColor - _startColor));
+        stroke(currentColor)
+        this.arc(0, 0, _radius, _radius, this.radians(i), this.radians(i + 5 ))
+    }
 }
 ```
 

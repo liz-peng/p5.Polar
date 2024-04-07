@@ -1,0 +1,20 @@
+{
+  "name": "@liz-peng/p5.polar",
+  "version": "1.0.0",
+  "description": "p5.Polar is a JavaScript library that extend [p5.js](https://p5js.org/) standard drawing functions with versions using polar coordinates. The library converts polar coordinate to cartesian coordinate, and abstracts the mathematics required for making many types of geometric patterns.",
+  "main": "p5.Polar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liz-peng/p5.polar.git"
+  },
+  "keywords": [],
+  "author": "Liz Peng <liz-peng@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liz-peng/p5.polar/issues"
+  },
+  "homepage": "https://github.com/liz-peng/p5.polar#readme"
+}
